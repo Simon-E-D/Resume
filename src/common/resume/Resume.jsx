@@ -84,6 +84,8 @@ function Resume () {
                 </a>
             </h4>
         </div>
+    </div>
+    <div className="resumeSkills">
         <h3> Skills </h3>
         <div className="m1">
             <h4 id="Front" className="shrink-margin">
@@ -104,6 +106,49 @@ function Resume () {
                     Visual Studio, VS Code, SSMS, Postman, GitHub, Git Bash, NPM, Yarn, Chrome Dev Tools, AGILE / Scrum methodologies.
                 </h4>
             </h4>
+        </div>
+    </div>
+    <div className="resumeExperience">
+        <h3> Experience </h3>
+        <div className="m1">
+            <miVet>
+                <div className="wrap">
+                    <h4>MiVet</h4>
+                    <h4 className="m1"> Remote </h4>
+                    <h4 className="m1"> Sept 2022 - Dec 2022 </h4>
+                </div>
+                <h4> Full-Stack Software Developer </h4>
+                <h4> MiVet is a web application designed to be a all in one application for mobile Equine vetenarians. </h4>
+                <ol>
+                    <ul>
+                        Designed and implemented database structures, including tables and stored procedures, utilizing foreign key relationships to ensure data integrity within the SQL Database.
+                    </ul>
+                    <ul>
+                        Collaborated with team members to effectively resolve complex data-joining issues across the database, ensuring seamless access to necessary information.
+                    </ul>
+                    <ul>
+                        Designed custom models, domains, interfaces, services, and API endpoints using .NET Core framework and C# language to connect front-end and back-end functionality.
+                    </ul>
+                    <ul>
+                        Developed a user-friendly paginated interface for the management and retrieval of files by both Veterans and Administrators. 
+                    </ul>
+                    <ul>
+                        Worked with a team of developers to produce highly responsive web pages to enrich UX, utilizing ReactJS and various related libraries such as Yup, Formik, React BootStrap, and SweetAlert, to ensure functionality and aesthetics.
+                    </ul>
+                    <ul>
+                        Participated in daily stand-ups using AGILE/SCRUM methodologies and peer code reviews to ensure all code was within standards and specifications of the team.
+                    </ul>
+                    <ul>
+                        Implemented and maintained a robust version control system utilizing Git and GitHub, promoting code quality and collaboration among peers to ensure workflow continuity.
+                    </ul>
+                    <ul>
+                        Conducted thorough code reviews, executed pull requests, and provided technical guidance to ensure consistency, quality, and optimal performance of project deliverables. Assisted colleagues in resolving any issues related to code merging.
+                    </ul>
+                </ol>
+            </miVet>
+            <seesCandies>
+
+            </seesCandies>
         </div>
      </div>
     </div>
