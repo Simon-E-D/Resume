@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./resume.css";
+import "../general.css";
 
 function Resume () {
     const [name] = useState({
@@ -10,7 +11,7 @@ function Resume () {
 
     const fullName = `${name.firstName} ${name.midName} ${name.lastName}`;
     return (<>
-    <div id="resumePage" className="m1">
+    <div id="resumePage" className="page-margins w50">
      <div className="resumeHeader">
         <h1 id="name">{fullName}</h1>
         <h2 id="jobTitle">Full stack web developer</h2>
@@ -84,71 +85,99 @@ function Resume () {
                 </a>
             </h4>
         </div>
-    </div>
-    <div className="resumeSkills">
+     </div>
+     <div className="resumeSkills">
         <h3> Skills </h3>
         <div className="m1">
             <h4 id="Front" className="shrink-margin">
                 <h4 className="shrink-margin"> Front End:</h4>
-                <h4 className="pl-1 w25 shrink-margin">
+                <h4 className="pl-1 shrink-margin">
                     React, JavaScript, HTML5, CSS, Bootstrap, AJAX, jQuery.
                 </h4>
             </h4>
             <h4 id="Back" className="shrink-margin">
                 <h4 className="shrink-margin"> Back End:</h4>
-                <h4 className="pl-1 w25 shrink-margin">
+                <h4 className="pl-1 shrink-margin">
                     SQL / TSQL, C#, .Net, .Net Core, ASP.Net, ADO, Web API.
                 </h4>
             </h4>
             <h4 id="Tools" className="shrink-margin">
                 <h4 className="shrink-margin"> General development: </h4>
-                <h4 className="pl-1 w25 shrink-margin">
+                <h4 className="pl-1 shrink-margin">
                     Visual Studio, VS Code, SSMS, Postman, GitHub, Git Bash, NPM, Yarn, Chrome Dev Tools, AGILE / Scrum methodologies.
                 </h4>
             </h4>
         </div>
-    </div>
-    <div className="resumeExperience">
+     </div>
+     <div className="resumeExperience">
         <h3> Experience </h3>
-        <div className="m1">
+        <div>
             <miVet>
-                <div className="wrap">
-                    <h4>MiVet</h4>
-                    <h4 className="m1"> Remote </h4>
-                    <h4 className="m1"> Sept 2022 - Dec 2022 </h4>
+                <div className="m1">
+                 <div className="wrap shrink-gap">
+                     <h4>MiVet</h4>
+                     <h4 className="m1"> Remote </h4>
+                     <h4 className="m1"> Sept 2022 - Dec 2022 </h4>
+                 </div>
+                 <h4> Full-Stack Software Developer </h4>
+                 <h4> MiVet is a web application designed to be a all in one application for mobile Equine vetenarians. </h4>
                 </div>
-                <h4> Full-Stack Software Developer </h4>
-                <h4> MiVet is a web application designed to be a all in one application for mobile Equine vetenarians. </h4>
                 <ol>
                     <ul>
-                        Designed and implemented database structures, including tables and stored procedures, utilizing foreign key relationships to ensure data integrity within the SQL Database.
+                        • Designed and implemented database structures, including tables and stored procedures, utilizing foreign key relationships to ensure data integrity within the SQL Database.
                     </ul>
                     <ul>
-                        Collaborated with team members to effectively resolve complex data-joining issues across the database, ensuring seamless access to necessary information.
+                        • Collaborated with team members to effectively resolve complex data-joining issues across the database, ensuring seamless access to necessary information.
                     </ul>
                     <ul>
-                        Designed custom models, domains, interfaces, services, and API endpoints using .NET Core framework and C# language to connect front-end and back-end functionality.
+                        • Designed custom models, domains, interfaces, services, and API endpoints using .NET Core framework and C# language to connect front-end and back-end functionality.
                     </ul>
                     <ul>
-                        Developed a user-friendly paginated interface for the management and retrieval of files by both Veterans and Administrators. 
+                        • Developed a user-friendly paginated interface for the management and retrieval of files by both Veterans and Administrators. 
                     </ul>
                     <ul>
-                        Worked with a team of developers to produce highly responsive web pages to enrich UX, utilizing ReactJS and various related libraries such as Yup, Formik, React BootStrap, and SweetAlert, to ensure functionality and aesthetics.
+                        • Worked with a team of developers to produce highly responsive web pages to enrich UX, utilizing ReactJS and various related libraries such as Yup, Formik, React BootStrap, and SweetAlert, to ensure functionality and aesthetics.
                     </ul>
                     <ul>
-                        Participated in daily stand-ups using AGILE/SCRUM methodologies and peer code reviews to ensure all code was within standards and specifications of the team.
+                        • Participated in daily stand-ups using AGILE/SCRUM methodologies and peer code reviews to ensure all code was within standards and specifications of the team.
                     </ul>
                     <ul>
-                        Implemented and maintained a robust version control system utilizing Git and GitHub, promoting code quality and collaboration among peers to ensure workflow continuity.
+                        • Implemented and maintained a robust version control system utilizing Git and GitHub, promoting code quality and collaboration among peers to ensure workflow continuity.
                     </ul>
                     <ul>
-                        Conducted thorough code reviews, executed pull requests, and provided technical guidance to ensure consistency, quality, and optimal performance of project deliverables. Assisted colleagues in resolving any issues related to code merging.
+                        • Conducted thorough code reviews, executed pull requests, and provided technical guidance to ensure consistency, quality, and optimal performance of project deliverables. Assisted colleagues in resolving any issues related to code merging.
                     </ul>
                 </ol>
             </miVet>
             <seesCandies>
-
+            <div className="wrap">
+                <h4 className="m1"> See's Candies: </h4> 
+                <h4 className="m1"> Nov 2020 - June 2023 </h4>
+            </div>
+            <h4>Manager</h4>
+            <h4> See's Candies is a confectionery company that specializes in chocolates, truffles, and other sweet treats. </h4>
+            <ol>
+                <ul> • Effectively managed and assigned tasks, utilizing delegation strategies to ensure completion of all objectives by the end of the day. </ul>
+                <ul> • Decreased downtime of any frozen or crashed machine by 5 minutes. </ul>
+                <ul> • Resolved technical issues related to connectivity between multiple devices, enabling the successful restart of production operations. </ul>
+            </ol>
             </seesCandies>
+        </div>
+     </div>
+     <div className="resumeProjects">
+        <h3> Projects </h3>
+        <div className="m1">
+            <reactResume>
+                <h4> ReactResume: A copy of my resume programmed as a React/jsx component files. </h4>
+                <ol>
+                    <ul>
+                        • Funcntional contact buttons taking the viewer to the proper page.
+                    </ul>
+                    <ul>
+                        • Functional page navigation from a landing page to the resume itself on the click of the button.
+                    </ul>
+                </ol>
+            </reactResume>
         </div>
      </div>
     </div>

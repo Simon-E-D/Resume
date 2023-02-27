@@ -1,43 +1,10 @@
 
-.m1{
-    margin-left: 1%;
-}
-
-.w25{
-    width:25%;
-}
-
-.w50{
-    width:50%;
-}
-
-.w75{
-    width:75%;
-}
-
-.w100{
-    width:100%;
-}
-
 .contactImg{
     width:30px;
     height: 30px;
 }
 
-.wrap{
-    display: flex;
-}
-
 .contact-alignY{
     margin-top: 5px;
     margin-bottom: 5px;
-}
-
-.shrink-margin{
-    margin-top: 3px;
-    margin-bottom: 1px;
-}
-
-.pl-1{
-    padding-left: 10px;
 }
