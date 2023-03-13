@@ -46,3 +46,16 @@
     margin-left: 13%;
     margin-right: 12%
 }
+
+.center50{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.shrinkB-1{
+    margin-bottom: -5px;
+}
+
+.shrinkB-2{
+    margin-bottom: -15px;
+}
