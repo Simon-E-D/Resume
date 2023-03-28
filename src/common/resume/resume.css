@@ -8,3 +8,12 @@
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+
+.side-bar{
+    width: 30%;
+}
+
+.main-body{
+    width: 70%;
+}
