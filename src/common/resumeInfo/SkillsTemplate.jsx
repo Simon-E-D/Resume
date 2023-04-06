@@ -1,14 +1,11 @@
 import React from "react";
 
 function SkillsTemplate (props) {
-
-    console.log("Skill template", props)
-
-    
-    
     return( 
     <>
-
+        <p className="pl-1 shrink-margin">
+             {props.skill} 
+        </p>
     </>
     )
 }

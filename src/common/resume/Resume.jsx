@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./resume.css";
 import "../general.css";
-import SkillsTemplate from "../resumeInfo/SkillsTemplate";
+import SkillsTemplate from '../resumeInfo/SkillsTemplate';
 import * as Info from "../resumeInfo/Info";
 
 function Resume () {
@@ -10,7 +10,7 @@ function Resume () {
         lastName: "Dilger",
     })
 
-    const [skills] = useState({
+    const [skills, updateSkills] = useState({
         front : Info.frontEnd,
         mappedFront : [],
         back : Info.backEnd,
@@ -20,12 +20,33 @@ function Resume () {
     })
 
     useEffect(() => {
-        <SkillsTemplate 
-            skills = {Info.frontEnd}
-        />
-    })
+        let front = skills.front;
+        let back = skills.back;
+        let tools = skills.tools;
+    
+        updateSkills((prevState)=>{
+            const pd = { ...prevState }
+            pd.front = front;
+            pd.mappedFront = front.map(mapSkills)
 
-    console.log("Skills state", skills)
+            pd.back = back;
+            pd.mappedBack = back.map(mapSkills)
+
+            pd.tools = tools;
+            pd.mappedTools = tools.map(mapSkills)
+
+            return pd;
+        })
+    });
+
+    const mapSkills = (aSkill, index) => {
+        return (
+            <SkillsTemplate
+                key = {index}
+                skill = {aSkill}
+            />
+        );
+    };
 
     const fullName = `${name.firstName} ${name.lastName}`;
     return (<>
@@ -112,40 +133,16 @@ function Resume () {
                 </h3>
                 <div className="m1">
                     <div id="Front" className="shrink-margin">
-                        <h4 className="shrink-margin"> Front End:</h4>
-                        <h5 className="pl-1 shrink-margin">
-                            React
-                        </h5>
-                        <h4 className="pl-1 shrink-margin">
-                            JavaScript,
-                        </h4>
-                        <h4 className="pl-1 shrink-margin">
-                            HTML5,
-                        </h4>
-                        <h4 className="pl-1 shrink-margin">
-                            CSS,
-                        </h4>
-                        <h4 className="pl-1 shrink-margin">
-                            Bootstrap,
-                        </h4> 
-                        <h4 className="pl-1 shrink-margin">
-                            AJAX, 
-                        </h4>
-                        <h4 className="pl-1 shrink-margin">
-                            jQuery.
-                        </h4>
+                        <h3 className="shrink-margin"> Front End:</h3>
+                        {skills.mappedFront}
                     </div>
                     <div id="Back" className="shrink-margin">
-                        <h4 className="shrink-margin"> Back End:</h4>
-                        <h4 className="pl-1 shrink-margin">
-                            SQL / TSQL, C#, .Net, .Net Core, ASP.Net, ADO, Web API.
-                        </h4>
+                        <h3 className="shrink-margin"> Back End:</h3>
+                        {skills.mappedBack}
                     </div>
                     <div id="Tools" className="shrink-margin">
-                        <h4 className="shrink-margin"> General development: </h4>
-                        <h4 className="pl-1 shrink-margin">
-                            Visual Studio, VS Code, SSMS, Postman, GitHub, Git Bash, NPM, Yarn, Chrome Dev Tools, AGILE / Scrum methodologies.
-                        </h4>
+                        <h3 className="shrink-margin"> General development: </h3>
+                        {skills.mappedTools}
                     </div>
                 </div>
             </div>
