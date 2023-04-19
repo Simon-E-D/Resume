@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "../general.css";
+import "../css/general.css";
 
 function Landing () {
 
